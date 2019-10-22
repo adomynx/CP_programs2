@@ -1,0 +1,30 @@
+﻿lst=[]
+ww=0
+ss1=[]
+lst2=[]
+for i in range(6):
+    m=input()
+    ss=[ch for ch in m]
+    ww=ww+len(ss)
+    #print(ww)
+    ss1.append(ss)
+    
+    lst.append(len(ss))
+    
+    ss=[]
+    
+rr=ww//6
+#print(rr)
+#print(ss1)
+#
+for i in range(len(lst)):
+    if(lst[i]==rr):
+        s=""
+        #print(i)
+        s=s.join(ss1[i])
+        lst2.append(s)
+
+
+s1=""
+s1=s1.join(lst2)
+print(s1)

@@ -1,0 +1,18 @@
+#Wertyu
+str = input()
+oriStr = ''
+dicti = {' ' : ' ','/' : '.','.' : ',',',' : 'M','M' : 'N','N' : 'B','B' : 'V','V' : 'C',
+         'C': 'X','X' : 'Z','Z' : 'Z',"'" : ';',';' : 'L','L' : 'K','K' : 'J','J' : 'H',
+         'H': 'G','G' : 'F','F' : 'D','D' : 'S','S' : 'A',']' : '[','[' : 'P',
+         'P': 'O','O' : 'I','I' : 'U','U' : 'Y','Y' : 'T','T' : 'R','R' : 'E','E' : 'W',
+         'W': 'Q','Q' : 'Q','A' : 'A','=' : '-','-' : '0',
+         '0': '9','9' : '8','8' : '7','7' : '6','6' : '5','5' : '4','4' : '3','3' : '2',
+         '2': '1','1' : '1'}
+str = str.upper()
+type(oriStr)
+for i in str:
+    oriStr = oriStr + dicti[i]
+    # oriStr = oriStr.append(dicti[i])
+    # type(oriStr)
+    # print(oriStr,end="")
+print(oriStr)

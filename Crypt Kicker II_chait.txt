@@ -1,0 +1,29 @@
+#Crpt Kicker 2
+
+dicti = {'p' : 'a','l' : 'b','o' : 'c','k' : 'd','m' : 'e','i' : 'f','j' : 'g','n' : 'h',
+         'u' : 'i','h' : 'j','b' : 'k','y' : 'l','g' : 'm','v' : 'n','t' : 'o','f' : 'p',
+         'c' : 'q','r' : 'r','d' : 's','x' : 't','e' : 'u','s' : 'v','z' : 'w','a' : 'x',
+         'q' : 'y','w' : 'z','1' : '1','2' : '2','3' : '3','4' : '4','5' : '5','6' : '6',
+         '7' : '7','8' : '8','9' : '9','0' : '0','-' : '-','=' : '=',',' : ',','.' : '.',
+         '/': '/',';' : ';',"'" : "'",'[' : '[',']' : ']',' ' : ' '}
+
+T = int(input())
+lines = []
+ans = ''
+while(T>0):
+    while True:
+        s = input()
+        if s:
+            lines.append(s)
+        else:
+            break;
+    # print(lines)
+    for i in lines:
+        ans = ''
+        for j in i:
+            ans = ans + dicti[j]
+        no = lines.index(i)
+        lines[no] = ans
+    for i in lines:
+        print(i)
+    T = T-1

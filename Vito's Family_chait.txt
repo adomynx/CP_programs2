@@ -1,0 +1,14 @@
+#Vito's Family
+r = int(input())
+if(r>0 and r<500):
+    dis = []
+    for i in range(0,r):
+        street = list(map(int,input().split()))
+        sorted(street)
+        s = 0
+        for st in range(len(street)-1):
+            diff = street[st+1] - street[st]
+            s = s+diff
+        dis.append(s)
+    print(dis)
+

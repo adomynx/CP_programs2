@@ -1,0 +1,50 @@
+import java.util.Scanner;
+public class Shoemaker {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int times = input.nextInt();
+        int jN = 0;
+        int tA = 0;
+        double max = 0;
+        int mj = 0;
+        int tempi = 0;
+        double temp = 0;
+        for (int i = 0; i < times; i++) {
+            tA = 0;
+            jN = input.nextInt();
+            int[] t = new int[jN];
+            double[] f = new double[jN];
+            double[] ans = new double[jN];
+            int[] sol = new int[jN];
+            boolean[] flag = new boolean[jN];
+            for (int j = 0; j < jN; j++) {
+                t[j] = input.nextInt();
+                f[j] = input.nextInt();
+                ans[j] = f[j] / t[j];
+                sol[j] = j + 1;
+            }
+            for (int k = 0; k < jN - 1; k++) {
+                max = 0;
+                mj = k;
+                for (int j = 0; j < jN - 1 - k; j++) {
+                    if (ans[j] < ans[j + 1]) {
+                        temp = ans[j];
+                        ans[j] = ans[j + 1];
+                        ans[j + 1] = temp;
+                        tempi = sol[j];
+                        sol[j] = sol[j + 1];
+                        sol[j + 1] = tempi;
+                    }
+                }
+            }
+            System.out.print(sol[0]);
+            for (int k = 1; k < jN; k++) {
+                System.out.print(" " + sol[k]);
+            }
+            System.out.println();
+            if (i != times - 1) {
+                System.out.println();
+            }
+        }
+    }
+}
